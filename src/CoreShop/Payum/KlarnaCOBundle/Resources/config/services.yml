@@ -1,0 +1,17 @@
+services:
+    CoreShop\Payum\KlarnaCOBundle\Form\Payment\KlarnaCOType:
+        tags:
+            - { name: coreshop.gateway_configuration_type, type: klarna_co }
+            - { name: form.type }
+
+    payum.klarna_checkout_gateway_factory:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        arguments: [Pringuin\Payum\KlarnaCO\KlarnaCOGatewayFactory]
+        tags:
+            - {name: payum.gateway_factory_builder, factory: klarna_co }
+
+    CoreShop\Payum\KlarnaCOBundle\Extension\AuthorizeExtension:
+        autowire: true
+        public: true
+        tags:
+            - { name: payum.extension, alias: klarna_checkout_authorize, factory: klarna_co, gateway: klarna_co, prepend: false }

@@ -1,0 +1,41 @@
+{
+    "name": "coreshop/payum-klarna-co-bundle",
+    "type": "pimcore-bundle",
+    "description": "CoreShop - Klarna Checkout Bundle",
+    "keywords": [
+        "coreshop",
+        "pimcore",
+        "ecommerce",
+        "klarna-checkout"
+    ],
+    "homepage": "http://www.coreshop.org",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Dominik Pfaffenbauer",
+            "email": "dominik@pfaffenbauer.at",
+            "homepage": "https://www.pfaffenbauer.at/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "pringuin/payum-klarna-co": "^1.0",
+        "coreshop/payum-bundle": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoreShop\\Payum\\KlarnaCOBundle\\": "src/CoreShop/Payum/KlarnaCOBundle"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "pimcore": {
+            "bundles": [
+                "CoreShop\\Payum\\KlarnaCOBundle\\KlarnaCOBundle"
+            ]
+        }
+    }
+}
