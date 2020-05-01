@@ -2,7 +2,7 @@
 (CO is short for Checkout and should indicate that is uses the kco_rest package)
 
 This Bundle activates the Klarna Checkout PaymentGateway in CoreShop.
-It requires the [pringuin/payum-klarna-co](https://github.com/pringuin/payum-klarna-co) repository which will be installed automatically.
+It requires the [pringuin/payum-klarna](https://github.com/pringuin/payum-klarna) repository which will be installed automatically.
 
 ## Installation
 
