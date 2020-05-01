@@ -1,0 +1,4 @@
+core_shop_payment:
+    pimcore_admin:
+        js:
+            klarna_co: /bundles/klarnaco/pimcore/js/klarna_co.js
