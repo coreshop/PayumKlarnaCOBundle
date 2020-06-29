@@ -93,7 +93,12 @@ final class AuthorizeExtension implements ExtensionInterface
             }
 
             $rates = array_map(function(TaxItemInterface $taxItem) { return $taxItem->getRate(); }, $itemTaxes);
-            $rate = (int)round((array_sum($rates) / count($rates)) * 100, 0);
+            if(count($rates) != 0){
+                $rate = (int)round((array_sum($rates) / count($rates)) * 100, 0);
+            }
+            else{
+                $rate = 0;
+            }
 
             $items[] = [
                 'type' => 'physical',
